@@ -21,6 +21,7 @@ gulp.task('ribé', ['sass', 'deusvult', 'kompress'], function () {
     });
 
     gulp.watch("app/src/scss/*.scss", ['sass']);
+    gulp.watch("app/src/scss/*/*.scss", ['sass']);
     gulp.watch("app/src/js/*.js", ['kompress']);
     gulp.watch("app/src/img/*.{png, jpg, jpeg}", ['deusvult']);
     gulp.watch("app/web/*.html").on('change', browserSync.reload);
