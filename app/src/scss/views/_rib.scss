@@ -1,3 +1,5 @@
+$ribOff: true;
+
 .rib {
   position: fixed;
   top: 0;
@@ -8,6 +10,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  @if $ribOff {
+    display: none;
+  }
+  
+  &--notReady {
+    display: none;
+  }
 
 
   &__hint {
